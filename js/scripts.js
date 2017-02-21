@@ -8,10 +8,11 @@ $(function(){
         newArray.push(dick);
       };
     });
+    $("#output").text(newArray);
     console.log(newArray);
-    var testArray = newArray.slice().reverse().join(" ");
-    console.log(testArray);
-
+    newArray = newArray.reverse().join(" ");
+    console.log(newArray);
+    $("#output2").text(newArray);
   });
 });
 $(function(){
@@ -23,9 +24,13 @@ $(function(){
         return dick;
       };
     });
+    $("#output3").text(newArray);
     console.log(newArray);
-    var final = newArray.slice().reverse().join(" ");
-    console.log(final);
+    newArray = newArray.reverse().join(" ");
+    // newArray = newArray.filter(Boolean).reverse().join(" ");
+    console.log(newArray);
+    $("#output4").text(newArray);
+    $("#output4").append("<em>|.filter(Boolean)| gets rid of falseys like undefines!</em>")
 
   });
 });
